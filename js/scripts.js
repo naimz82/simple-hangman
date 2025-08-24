@@ -3,10 +3,13 @@
    Date: Feb 9th, 2023
 */
 
-/*** ADD YOUR QUESTIONS TO THE "questions" ARRAY OF OBJECTS BELOW ***/
-/* array of objects to store questions and their clues */
-const questions = [{ word: "KANGAROOOO", clue: "Animal" }, { word: "LOBSTER", clue: "Animal" }, { word: "PELICANCCV", clue: "Animal" }, { word: "DAISY", clue: "Flower" }, { word: "TULIP", clue: "Flower" }, { word: "CARNATIONN", clue: "Flower" }, { word: "HYACINTH", clue: "Flower" }, { word: "CHRYSANTHE", clue: "Flower" }];
-
+let questions = [];
+//load questions and clues from questions.json file
+fetch('js/questions.json')
+    .then(response => response.json())
+    .then(data => {
+        questions.push(...data);
+    });
 
 let revealedLetters = 0;
 
