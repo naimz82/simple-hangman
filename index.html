@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Hangman Game</title>
+
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="prefetch" href="img/b8.png">
+        <link rel="prefetch" href="img/b7.png">
+        <link rel="prefetch" href="img/b6.png">
+        <link rel="prefetch" href="img/b5.png">
+        <link rel="prefetch" href="img/b4.png">
+        <link rel="prefetch" href="img/b3.png">
+        <link rel="prefetch" href="img/b2.png">
+        <link rel="prefetch" href="img/b1.png">
+    </head>
+    <body>
+        <div id="logo"><img src="img/logo.png"></div>
+
+        <div id="questionTile"></div>
+        <div id="questionClue"></div>
+
+        <div id="lives">
+            <div id="face">
+                <img src="img/b8.png">
+            </div>
+            <div id="hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        
+        <div id="keyboard">
+            <!-- container to draw alphabets in -->
+        </div>
+
+        <a id="reload">[Load A New Game]</a>
+        
+        <div id="footer">Developed by <a href="https://www.amz.com.my/" target="_blank"><strong>AMZ IT Solutions</strong></a> [<a href="mailto:admin@amz.com.my" target="_blank">admin@amz.com.my</a>]</div>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/sweetalert.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
