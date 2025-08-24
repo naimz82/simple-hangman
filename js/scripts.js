@@ -3,14 +3,6 @@
    Date: Feb 9th, 2023
 */
 
-let questions = [];
-//load questions and clues from questions.json file
-fetch('js/questions.json')
-    .then(response => response.json())
-    .then(data => {
-        questions.push(...data);
-    });
-
 let revealedLetters = 0;
 
 /* retrieves a random question */
@@ -137,11 +129,20 @@ function revealLetter(question) {
     }
 }
 
-const currentQuestion = getRandomQuestion();
-drawEmptyTiles(currentQuestion.word);
-const cluebox = document.getElementById("questionClue");
-cluebox.innerHTML = "Hint: " + currentQuestion.clue;
-revealLetter(currentQuestion.word);
+let questions = [];
+//load questions and clues from questions.json file
+fetch('js/questions.json')
+    .then(response => response.json())
+    .then(data => {
+        questions.push(...data);
+
+        //initialize
+        const currentQuestion = getRandomQuestion();
+        drawEmptyTiles(currentQuestion.word);
+        const cluebox = document.getElementById("questionClue");
+        cluebox.innerHTML = "Hint: " + currentQuestion.clue;
+        revealLetter(currentQuestion.word);
+    });
 
 document.getElementById("reload").addEventListener("click",function(){
     location.reload();
